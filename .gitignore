@@ -1,10 +1,5 @@
 # for eclipse
-.classpath
-.project
-/.settings/
-service/target/
-contract/target/
-
+out/
 # IntelliJ project files
 *.idea
 *.iml
