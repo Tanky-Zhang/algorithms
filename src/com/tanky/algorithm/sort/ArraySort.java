@@ -1,4 +1,4 @@
-package com.tanky.structure.arraysort;
+package com.tanky.algorithm.sort;
 
 import java.util.*;
 import java.util.concurrent.LinkedBlockingDeque;
