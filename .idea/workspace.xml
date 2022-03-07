@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8a7e2b5-2d80-48ca-9e6c-034c1a5a0350" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/atguigu/sort/MergetSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/atguigu/sort/MergetSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tanky/algorithm/binarysearch/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tanky/algorithm/binarysearch/BinarySearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +202,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -217,13 +221,13 @@
       <recent name="E:\dataStructure\data_structure\src\com" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PackageProblemTwoDimensional">
-    <configuration name="PackageProblem01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tanky.algorithm.dynamicprogramming.PackageProblem01" />
+  <component name="RunManager" selected="Application.MergeSort">
+    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tanky.algorithm.sort.MergeSort" />
       <module name="data_structure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tanky.algorithm.dynamicprogramming.*" />
+          <option name="PATTERN" value="com.tanky.algorithm.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -285,18 +289,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.PackageProblem01Upgrage" />
-      <item itemvalue="Application.PackageProblem01" />
       <item itemvalue="Application.PackageProblemMixed" />
       <item itemvalue="Application.PackageProblemMultiple" />
       <item itemvalue="Application.PackageProblemTwoDimensional" />
+      <item itemvalue="Application.MergeSort" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MergeSort" />
         <item itemvalue="Application.PackageProblemTwoDimensional" />
         <item itemvalue="Application.PackageProblemMixed" />
         <item itemvalue="Application.PackageProblemMultiple" />
         <item itemvalue="Application.PackageProblem01Upgrage" />
-        <item itemvalue="Application.PackageProblem01" />
       </list>
     </recent_temporary>
   </component>

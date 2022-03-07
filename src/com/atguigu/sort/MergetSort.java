@@ -101,7 +101,7 @@ public class MergetSort {
 		int tempLeft = left; // 
 		//第一次合并 tempLeft = 0 , right = 1 //  tempLeft = 2  right = 3 // tL=0 ri=3
 		//最后一次 tempLeft = 0  right = 7
-		while(tempLeft <= right) { 
+		while(tempLeft <= right) {
 			arr[tempLeft] = temp[t];
 			t += 1;
 			tempLeft += 1;

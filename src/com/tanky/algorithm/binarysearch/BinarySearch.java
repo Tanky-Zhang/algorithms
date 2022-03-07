@@ -1,4 +1,4 @@
-package com.tanky.structure.binarysearch;
+package com.tanky.algorithm.binarysearch;
 
 import java.util.Arrays;
 
