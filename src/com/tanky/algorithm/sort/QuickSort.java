@@ -25,9 +25,11 @@ public class QuickSort {
 
     private static void quickSort(int[] array, int start, int end) {
 
-        int partition = partition(array, start, end);
-        quickSort(array, start, partition - 1);
-        quickSort(array, partition, end);
+        if (start < end) {
+            int partition = partition(array, start, end);
+            quickSort(array, start, partition-1);
+            quickSort(array, partition, end);
+        }
 
     }
 
@@ -44,7 +46,7 @@ public class QuickSort {
         //找出基准值
         int m = array[start];
 
-        int i = start+1;
+        int i = start + 1;
         int j = end;
 
         while (i < j) {
