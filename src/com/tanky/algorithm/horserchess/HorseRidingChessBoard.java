@@ -1,4 +1,4 @@
-package com.tanky.algorithm.horseridingchessboard;
+package com.tanky.algorithm.horserchess;
 
 
 import java.awt.*;
@@ -167,7 +167,7 @@ public class HorseRidingChessBoard {
     }
 
 
-    /* *
+    /**
      * 利用贪心算法进行优化
      * 对获取的list的集合的所有元素进行非递减排序
      * 1，2，3，4，5 递增排序 5，4，3，2，1 递减排序  1，2，2，3，3，4，5 非递减
