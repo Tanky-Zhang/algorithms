@@ -1,5 +1,7 @@
 package com.tanky.algorithm.tree;
 
+import com.tanky.structure.tree.TreeNode;
+
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
