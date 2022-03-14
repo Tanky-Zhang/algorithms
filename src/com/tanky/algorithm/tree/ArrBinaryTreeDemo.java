@@ -1,16 +1,5 @@
 package com.tanky.algorithm.tree;
 
-public class ArrBinaryTreeDemo {
-
-	public static void main(String[] args) {
-		int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
-		//����һ�� ArrBinaryTree
-		ArrBinaryTree arrBinaryTree = new ArrBinaryTree(arr);
-		arrBinaryTree.preOrder(); // 1,2,4,5,3,6,7
-	}
-
-}
-
 //��дһ��ArrayBinaryTree, ʵ��˳��洢����������
 
 class ArrBinaryTree {

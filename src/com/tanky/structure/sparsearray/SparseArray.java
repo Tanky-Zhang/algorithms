@@ -1,4 +1,4 @@
-package com.tanky.structure.array.sparsearray;
+package com.tanky.structure.sparsearray;
 
 public class SparseArray {
 
