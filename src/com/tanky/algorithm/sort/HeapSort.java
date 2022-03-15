@@ -1,10 +1,9 @@
 package com.tanky.algorithm.sort;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Arrays;
 
 /**
- * 堆排序的非递归实现
+ * 堆排序实现
  * [4,3,5,6,8,1,2,0,8,4]
  * n节点的左、右孩子节点分别是2n+1和2n+2
  *
@@ -15,35 +14,91 @@ public class HeapSort {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[8000000];
-        for (int i = 0; i < 8000000; i++) {
-            arr[i] = (int) (Math.random() * 8000000);
-        }
+        int[] arr = new int[]{3, 4, 1, 2, 1, 9, 4, 5, 3, 7, 2, 8};
+        //递归的排序
+        heapSortWithRecursion(arr);
+        System.out.println("递归堆排序后的数组为：" + Arrays.toString(arr));
 
-        System.out.println();
-        Date data1 = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String date1Str = simpleDateFormat.format(data1);
-        System.out.println(date1Str);
-
-        heapSort(arr);
-
-        Date data2 = new Date();
-        String date2Str = simpleDateFormat.format(data2);
-        System.out.println(date2Str);
     }
 
-    public static void heapSort(int arr[]) {
-        int temp = 0;
+    /**
+     * 递归堆排序
+     *
+     * @param arr 需要排序的数组
+     */
+    private static void heapSortWithRecursion(int[] arr) {
 
+        int length = arr.length;
+
+        // 先构建出一个大顶堆
+        for (int i = length / 2 - 1; i >= 0; i--) {
+            adjustHeapWithRecursion(arr, i, arr.length);
+        }
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+
+            //每次将最大值交换到最后
+            swap(arr, 0, i);
+
+            length--;
+
+            //每次对0～i-1的范围内的数据进行堆排序，因为i之后的数据已经有序了
+            adjustHeapWithRecursion(arr, 0, length);
+
+        }
+
+    }
+
+    /**
+     * 递归实现大顶堆的构建（自顶向下）
+     *
+     * @param arr    数组
+     * @param index  所需要进行构建的起始位置（即每个子树的根节点）
+     * @param length 当前需要构建的数组长度（实际数组长度可能要比这个数大）
+     */
+    private static void adjustHeapWithRecursion(int[] arr, int index, int length) {
+
+        //先算出左子节点和右子节点的索引下标
+        int leftChild = 2 * index + 1;
+        int rightChild = 2 * index + 2;
+
+        //1.先判断是否超过索引下标，右节点坐标未超过，左节点一定没有超过
+        if (rightChild < length) {
+            //2.如果左子节点是大的
+            if (arr[leftChild] > arr[rightChild] && arr[leftChild] > arr[index]) {
+                swap(arr, index, leftChild);
+                //3.以左子节点为根节点继续往下递归
+                adjustHeapWithRecursion(arr, leftChild, length);
+                //4.如果右子节点是大的
+            } else if (arr[rightChild] >= arr[leftChild] && arr[rightChild] >= arr[index]) {
+                swap(arr, index, rightChild);
+                //5.以左子节点为根节点继续往下递归
+                adjustHeapWithRecursion(arr, rightChild, length);
+            }
+            //6.如果只有左子节点，此时也不必递归，因为这是完全二叉树
+        } else if (leftChild < length) {
+            if (arr[leftChild] > arr[index]) {
+                swap(arr, index, leftChild);
+            }
+        }
+
+    }
+
+
+    /**
+     * 非递归堆排序
+     *
+     * @param arr
+     */
+    public static void heapSort(int arr[]) {
+
+        //从后往前遍历
         for (int i = arr.length / 2 - 1; i >= 0; i--) {
             adjustHeap(arr, i, arr.length);
         }
 
         for (int j = arr.length - 1; j > 0; j--) {
-            temp = arr[j];
-            arr[j] = arr[0];
-            arr[0] = temp;
+            swap(arr, 0, j);
             adjustHeap(arr, 0, j);
         }
 
@@ -51,11 +106,18 @@ public class HeapSort {
     }
 
 
-    public static void adjustHeap(int arr[], int i, int lenght) {
+    /**
+     * 非递归自顶向下构建大顶堆排序
+     *
+     * @param arr
+     * @param i
+     * @param length
+     */
+    public static void adjustHeap(int arr[], int i, int length) {
         int temp = arr[i];
         //1. k = i * 2 + 1 k
-        for (int k = i * 2 + 1; k < lenght; k = k * 2 + 1) {
-            if (k + 1 < lenght && arr[k] < arr[k + 1]) {
+        for (int k = i * 2 + 1; k < length; k = k * 2 + 1) {
+            if (k + 1 < length && arr[k] < arr[k + 1]) {
                 k++;
             }
             if (arr[k] > temp) {
@@ -66,6 +128,20 @@ public class HeapSort {
             }
         }
         arr[i] = temp;
+    }
+
+
+    /**
+     * 数组中两数交换方法
+     *
+     * @param arr
+     * @param left
+     * @param right
+     */
+    private static void swap(int[] arr, int left, int right) {
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
     }
 
 }
