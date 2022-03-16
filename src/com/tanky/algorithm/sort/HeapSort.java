@@ -14,7 +14,7 @@ public class HeapSort {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[]{3, 4, 1, 2, 1, 9, 4, 5, 3, 7, 2, 8};
+        int[] arr = new int[]{10, 4, 1, 2, 1, 9, 4, 5, 3,10};
         //递归的排序
         heapSortWithRecursion(arr);
         System.out.println("递归堆排序后的数组为：" + Arrays.toString(arr));
@@ -28,23 +28,18 @@ public class HeapSort {
      */
     private static void heapSortWithRecursion(int[] arr) {
 
-        int length = arr.length;
 
-        // 先构建出一个大顶堆
-        for (int i = length / 2 - 1; i >= 0; i--) {
+        // 先构建出一个大顶堆,从第一个父节点开始即可
+        for (int i = arr.length / 2 - 1; i >= 0; i--) {
             adjustHeapWithRecursion(arr, i, arr.length);
         }
 
+        //从最后一层开始构建可以有效降低时间复杂度
         for (int i = arr.length - 1; i >= 0; i--) {
-
             //每次将最大值交换到最后
             swap(arr, 0, i);
-
-            length--;
-
-            //每次对0～i-1的范围内的数据进行堆排序，因为i之后的数据已经有序了
-            adjustHeapWithRecursion(arr, 0, length);
-
+            //每次对0～i-1的范围内的数据进行堆排序，因为i以及i之后的数据已经有序了
+            adjustHeapWithRecursion(arr, 0, i);
         }
 
     }
@@ -84,6 +79,7 @@ public class HeapSort {
 
     }
 
+    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     /**
      * 非递归堆排序
@@ -113,14 +109,20 @@ public class HeapSort {
      * @param i
      * @param length
      */
-    public static void adjustHeap(int arr[], int i, int length) {
+    public static void adjustHeap(int[] arr, int i, int length) {
+
+        //存储的是最大值
         int temp = arr[i];
-        //1. k = i * 2 + 1 k
+        //1.k = i * 2 + 1 这次循环是在提取最大值不断往树的根节点上放
         for (int k = i * 2 + 1; k < length; k = k * 2 + 1) {
+            //如果小于左子节点
             if (k + 1 < length && arr[k] < arr[k + 1]) {
+                //那么接下来算右子节点
                 k++;
             }
+            //如果大于最大值就要交换
             if (arr[k] > temp) {
+                //k所在的位置是比较大的，要将这个值提到i位置上？
                 arr[i] = arr[k];
                 i = k;
             } else {
