@@ -15,7 +15,11 @@ public class InsertSort {
 
         int[] arr = {1, 5, 9, 8, 7, 4, 5, 3, 6, 7};
 
-        insertSort(arr);
+        //简单插入排序
+        //insertSort(arr);
+
+        //折半插入排序
+        halfInsertSort(arr);
 
         System.out.println(Arrays.toString(arr));
 
@@ -56,13 +60,34 @@ public class InsertSort {
      * @param arr
      */
     private static void halfInsertSort(int[] arr) {
+        int tmp;
+        int j;
+        int low;
+        int high;
 
+        for (int i = 0; i < arr.length; i++) {
+            tmp = arr[i];
+            j = i;
+            low = 0;
+            high = j;
+            while (low <= high) {
+                //找中点
+                int mid = (low + high) / 2;
+                if (arr[mid] > tmp) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
+                }
+            }
+            //开始移动数据
+            for (; j > high; j--) {
+                arr[j] = arr[j - 1];
+            }
 
-
-
-
-
-
+            if (i!=j) {
+                arr[high] = tmp;
+            }
+        }
 
     }
 
