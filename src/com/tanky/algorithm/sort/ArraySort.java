@@ -19,8 +19,9 @@ public class ArraySort {
         //heapSort(arr);
         //countSort(arr);
         // shellSort(arr);
-        quickSort(arr, 0, arr.length - 1);
+        //quickSort(arr, 0, arr.length - 1);
 
+        selectSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }

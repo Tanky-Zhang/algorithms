@@ -13,7 +13,7 @@ public class InsertSort {
 
     public static void main(String[] args) {
 
-        int[] arr = {1, 5, 9, 8, 7, 4, 5, 3, 6, 7};
+        int[] arr = {10, 5, 9, 8, 7, 4, 5, 3, 6, 7};
 
         //简单插入排序
         //insertSort(arr);
@@ -67,9 +67,8 @@ public class InsertSort {
 
         for (int i = 0; i < arr.length; i++) {
             tmp = arr[i];
-            j = i;
             low = 0;
-            high = j;
+            high = j = i;
             while (low <= high) {
                 //找中点
                 int mid = (low + high) / 2;
@@ -80,12 +79,11 @@ public class InsertSort {
                 }
             }
             //开始移动数据
-            for (; j > high; j--) {
+            for (; j > high + 1; j--) {
                 arr[j] = arr[j - 1];
             }
-
-            if (i!=j) {
-                arr[high] = tmp;
+            if (i != j) {
+                arr[high + 1] = tmp;
             }
         }
 
