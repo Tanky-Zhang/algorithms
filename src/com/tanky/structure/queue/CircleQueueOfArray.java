@@ -1,27 +1,24 @@
 package com.tanky.structure.queue;
 
 /**
- * 使用数组实现队列
+ * 双端队列实现
  *
  * @author tanky
  * @date 2022/03/22
  */
-public class QueueOfArray {
-
+public class CircleQueueOfArray {
     private int maxSize;
     private int front;
     private int rear;
     private int[] arr;
 
-    public QueueOfArray(int arrMaxSize) {
+    public CircleQueueOfArray(int arrMaxSize) {
         maxSize = arrMaxSize;
         arr = new int[maxSize];
-        front = -1;
-        rear = -1;
     }
 
     public boolean isFull() {
-        return rear == maxSize - 1;
+        return (rear + 1) % maxSize == front;
     }
 
     public boolean isEmpty() {
@@ -33,21 +30,17 @@ public class QueueOfArray {
             System.out.println("队列已满");
             return;
         }
-        rear++;
         arr[rear] = n;
+        rear = (rear + 1) % maxSize;
     }
 
-    /**
-     * 从队列获取第一个元素
-     *
-     * @return
-     */
     public int getQueue() {
         if (isEmpty()) {
-            throw new RuntimeException("队列是空的");
+            throw new RuntimeException("队列已空");
         }
-        front++;
-        return arr[front];
+        int value = arr[front];
+        front = (front + 1) % maxSize;
+        return value;
 
     }
 
@@ -56,15 +49,19 @@ public class QueueOfArray {
             System.out.println("队列是空的");
             return;
         }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.printf("arr[%d]=%d\n", i, arr[i]);
+        for (int i = front; i < front + size(); i++) {
+            System.out.printf("arr[%d]=%d\n", i % maxSize, arr[i % maxSize]);
         }
+    }
+
+    public int size() {
+        return (rear + maxSize - front) % maxSize;
     }
 
     public int headQueue() {
         if (isEmpty()) {
             throw new RuntimeException("队列是空的");
         }
-        return arr[front + 1];
+        return arr[front];
     }
 }
