@@ -27,18 +27,23 @@ public class StackOfDoubleQueue {
      * @param data
      */
     public void push(int data) {
+
+        if (isFull()) {
+            throw new RuntimeException("栈已满");
+        }
+
         //先放入第一个队列
-        firstQueue.addQueue(data);
+        firstQueue.push(data);
         //进行数据迁移
         while (!secondQueue.isEmpty()) {
-            firstQueue.addQueue(secondQueue.getQueue());
-        }
-        while (!firstQueue.isEmpty()) {
-            secondQueue.addQueue(firstQueue.getQueue());
+            firstQueue.push(secondQueue.poll());
         }
 
+        //引用交换
+        QueueOfArray tmp = firstQueue;
+        firstQueue = secondQueue;
+        secondQueue = tmp;
     }
-
 
     /**
      * 弹栈方法
@@ -46,6 +51,28 @@ public class StackOfDoubleQueue {
      * @return
      */
     public int pop() {
-        return secondQueue.getQueue();
+        if (isEmpty()) {
+            throw new RuntimeException("栈为空");
+        }
+        return secondQueue.poll();
+    }
+
+
+    /**
+     * 判空
+     *
+     * @return
+     */
+    public boolean isEmpty() {
+        return secondQueue.isEmpty();
+    }
+
+    /**
+     * 判满
+     *
+     * @return
+     */
+    public boolean isFull() {
+        return secondQueue.isFull();
     }
 }

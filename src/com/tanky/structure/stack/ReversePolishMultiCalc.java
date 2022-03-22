@@ -1,4 +1,4 @@
-package com.tanky.algorithm.reversepolishcal;
+package com.tanky.structure.stack;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,6 +6,12 @@ import java.util.List;
 import java.util.Stack;
 import java.util.regex.Pattern;
 
+/**
+ * 逆波兰表达式
+ *
+ * @author tanky
+ * @date 2022/03/22
+ */
 public class ReversePolishMultiCalc {
 
 

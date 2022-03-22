@@ -1,5 +1,11 @@
 package com.tanky.structure.sparsearray;
 
+/**
+ * 稀疏数组
+ *
+ * @author tanky
+ * @date 2022/03/22
+ */
 public class SparseArray {
 
     public static void main(String[] args) {
