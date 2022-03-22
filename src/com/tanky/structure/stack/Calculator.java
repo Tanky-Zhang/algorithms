@@ -1,5 +1,8 @@
 package com.tanky.structure.stack;
 
+/**
+ * 用栈实现计算器
+ */
 public class Calculator {
 
     public static void main(String[] args) {
