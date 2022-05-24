@@ -1,4 +1,4 @@
-package com.tanky.algorithm.backtrack;
+package com.tanky.algorithm.recursion;
 
 /**
  * @Description: 利用回溯解决八皇后问题
