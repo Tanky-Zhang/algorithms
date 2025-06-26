@@ -13,20 +13,25 @@ public class BinarySearch {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[100];
+//        int[] arr = new int[100];
+//
+//        for (int i = 1; i <= 100; i++) {
+//
+//            arr[i - 1] = i;
+//
+//        }
+//
+//        // int i = insertValueSearch(arr, 0, 99, 50);
+//
+//
+//        int i = commonBinarySearch(arr, 0, 99, 50);
+//
+//        System.out.println(i + "====================");
 
-        for (int i = 1; i <= 100; i++) {
+            String ss="";
 
-            arr[i - 1] = i;
-
-        }
-
-        // int i = insertValueSearch(arr, 0, 99, 50);
-
-
-        int i = commonBinarySearch(arr, 0, 99, 50);
-
-        System.out.println(i + "====================");
+            ss=ss.replaceAll("    \n","");
+            System.out.println(ss);
 
 
     }
