@@ -1,5 +1,8 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
+
+//import org.jgrapht.util.DoublyLinkedList.ListNode;
+
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -13,7 +16,16 @@
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast!=null&&fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

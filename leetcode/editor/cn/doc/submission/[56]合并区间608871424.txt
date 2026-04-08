@@ -1,0 +1,32 @@
+class Solution {
+    public int[][] merge(int[][] intervals) {
+
+        if (intervals.length == 0) {
+            return new int[0][0];
+        }
+
+        // step1:按照start从小到大排序
+        Arrays.sort(intervals, new Comparator<int[]>() {
+            public int compare(int[] in1, int[] in2) {
+                return in1[0] - in2[0];
+            }
+        });
+
+        // step2:合并数组
+        List<int[]> merged = new ArrayList<>();
+
+        for (int i = 0; i < intervals.length; i++) {
+            int size = merged.size();
+            if (merged.size() == 0 || merged.get(size - 1)[1] < intervals[i][0]) {
+                merged.add(new int[] { intervals[i][0], intervals[i][1] });
+            } else {
+                merged.get(size - 1)[1] = Math.max(merged.get(size - 1)[1], intervals[i][1]);
+            }
+        }
+
+        return merged.toArray(new int[merged.size()][]);
+
+    }
+}
+//runtime:10 ms
+//memory:45.9 MB

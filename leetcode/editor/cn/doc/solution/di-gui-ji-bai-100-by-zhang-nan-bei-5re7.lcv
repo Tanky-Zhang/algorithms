@@ -1,0 +1,43 @@
+### 递归求解
+
+![Snipaste_2021-05-13_16-53-26.jpg](https://pic.leetcode-cn.com/1620896227-smFsGV-Snipaste_2021-05-13_16-53-26.jpg)
+
+本题使用动态规划更好一些，我在此给出递归的方法。
+对象含义如下：
+
++ pair<int, int > {m,n}：当前坐标
++ map<pair<int, int>, int> map[{m,n}] ： 表示起点到点{m,n}的路径数量。
+
+递归思路如下：
+
++ 递归终止条件：当点在最上一条边或最左一条边时，仅有一条路径
++ 递归关系式：点{m,n}的路径个数 = 点{m - 1,n}的路径个数 + 点{m,n - 1}的路径个数
++ 本题必须使用map存储数据，否则重复计算会造成超时。
+
+### 代码
+
+* cpp
+
+```cpp
+class Solution {
+private:
+    int func(map<pair<int, int>, int> &map, int m, int n){
+        // 如果map没有{m,n}
+        if(map.find({m , n}) == map.end()){
+            // 递归终止条件 当点在最上一条边或最左一条边时，仅有一条路径
+            if(n == 1 || m == 1)    map[{m , n}] = 1;
+            // 递归关系式   点{m,n}的路径 = 点{m - 1,n}的路径 + 点{m,n - 1}的路径
+            else    map[{m, n}] = func(map, m - 1, n) + func(map, m, n - 1);
+        }
+        // 如果有，那么直接返回
+        return map[{m , n}];
+    }
+public:
+    int uniquePaths(int m, int n) {
+        if(m <= 0 || n <= 0) return 0;
+        map<pair<int, int>, int> map;
+        return func(map, m, n);
+    }
+};
+```
+
