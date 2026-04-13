@@ -1,36 +1,30 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+
+    List<List<Integer>> res = new ArrayList<>();
+
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> res = new ArrayList<>();
-        List<Integer> combine = new ArrayList<>();
-        for (int num : nums) {
-            combine.add(num);
-        }
-        dfs(res, combine, nums, 0);
+        List<Integer> tmpList = new ArrayList<>();
+        dfs(tmpList, nums);
         return res;
     }
 
-    private void dfs(List<List<Integer>> res, List<Integer> combine, int[] nums, int start) {
-
+    public void dfs(List<Integer> tmpList, int[] nums) {
         //base case
-        if (start == nums.length) {
-            res.add(new ArrayList<>(combine));
+        if (tmpList.size() == nums.length) {
+            res.add(new ArrayList<>(tmpList));
             return;
         }
 
-        for (int i = start; i < nums.length; i++) {
-            // 动态维护数组
-            Collections.swap(combine, start, i);
-            //combine.add(nums[i]);
-            // 继续递归填下一个数
-            dfs(res, combine, nums, start + 1);
-            // 撤销操作
-            Collections.swap(combine, start, i);
-            //combine.remove(combine.size()-1);
+        for (int num : nums) {
+            if (tmpList.contains(num)) {
+                continue;
+            }
+            tmpList.add(num);
+            dfs(tmpList, nums);
+            tmpList.remove(tmpList.size() - 1);
         }
-
-
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

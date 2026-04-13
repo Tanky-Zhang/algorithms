@@ -3,18 +3,22 @@
 class Solution {
     public boolean canJump(int[] nums) {
 
-        int n = nums.length;
-        int maxStep = 0;
-        //maxStep = nums[0];
-        for (int i = 0; i < n; i++) {
-            if (i <= maxStep) {
-                maxStep = Math.max(maxStep, nums[i] + i);
-                if (maxStep >= n - 1) {
-                    return true;
-                }
+        int faIndex = 0;
+
+        int len = nums.length;
+
+        //len - 1 避免最后一步达不到的情况检测不到
+        for (int i = 0; i < len - 1; i++) {
+
+            faIndex = Math.max(faIndex, i + nums[i]);
+
+            if (faIndex <= i) {
+                return false;
             }
+
         }
-        return false;
+
+        return faIndex >= len - 1;
 
     }
 }
