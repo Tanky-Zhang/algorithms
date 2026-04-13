@@ -4,39 +4,40 @@ class Solution {
 
 
     public int[] searchRange(int[] nums, int target) {
-        int leftIdx = binarySearch(nums, target, true);
-        int rightIdx = binarySearch(nums, target, false) - 1;
-        if (leftIdx <= rightIdx && rightIdx < nums.length && nums[leftIdx] == target && nums[rightIdx] == target) {
-            return new int[] {leftIdx, rightIdx};
+
+        int left = binarySearch(true, nums, target);
+        int right = binarySearch(false, nums, target) - 1;
+
+        if (left <= right && right < nums.length && nums[left] == target && nums[right] == target) {
+            return new int[] {left, right};
         }
+
         return new int[] {-1, -1};
+
     }
 
-    public int binarySearch(int[] nums, int target, boolean lower) {
-        int left = 0, right = nums.length - 1;
+    private int binarySearch(boolean lower, int[] nums, int target) {
+
+        int left = 0;
+        int right = nums.length - 1;
+
         int ans = nums.length;
+
         while (left <= right) {
+
             int mid = (left + right) / 2;
-            if (lower) {
-                if (nums[mid] >= target) {
-                    right = mid - 1;
-                    //符合条件，返回答案
-                    ans = mid;
-                } else {
-                    left = mid + 1;
-                    //ans = mid;
-                }
+
+            if ((lower && nums[mid] >= target) || (!lower && nums[mid] > target)) {
+                right = mid - 1;
+                ans = mid;
             } else {
-                if (nums[mid] > target) {
-                    right = mid - 1;
-                    ans = mid;
-                } else {
-                    left = mid + 1;
-                    //ans = mid;
-                }
+                left = mid + 1;
             }
+
         }
+
         return ans;
+
     }
 
 }
