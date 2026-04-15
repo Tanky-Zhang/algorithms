@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 快速排序实现
  * 快速排序分为三步分治过程，划分，解决，合并。
  *
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/03/09
  */
 public class QuickSort {

@@ -1,7 +1,7 @@
 package com.tanky.structure.linkedlist;
 
 /**
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/11/13
  */
 public class LoopListNode {

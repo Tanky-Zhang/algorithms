@@ -3,7 +3,7 @@ package com.tanky.algorithm.bitopt;
 /**
  * 不用额外的数交换两个数
  *
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/05/24
  */
 public class SwapData {

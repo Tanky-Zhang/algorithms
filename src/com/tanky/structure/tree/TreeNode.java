@@ -3,7 +3,7 @@ package com.tanky.structure.tree;
 /**
  * 树的节点实现
  *
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/03/14
  */
 public class TreeNode {

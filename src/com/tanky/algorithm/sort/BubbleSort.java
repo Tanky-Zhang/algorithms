@@ -3,7 +3,7 @@ package com.tanky.algorithm.sort;
 /**
  * 冒泡排序实现
  *
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/03/17
  */
 public class BubbleSort {

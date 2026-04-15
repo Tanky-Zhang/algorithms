@@ -3,7 +3,7 @@ package com.tanky.algorithm.bitopt;
 /**
  * 一个数组中一种数字出现了奇数次，其他都出现了偶数次。找出奇数次的数字
  *
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/05/24
  */
 public class WordCount {

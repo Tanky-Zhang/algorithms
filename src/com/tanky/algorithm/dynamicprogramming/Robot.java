@@ -8,7 +8,7 @@ package com.tanky.algorithm.dynamicprogramming;
  * 如果机器人来到中间位置，那么下一步可能向左走也可能向右走，
  * 规定机器人必须走K步，最终能来到P位置（P也是1～N中的一个）的方法有多少种
  *
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/11/12
  */
 public class Robot {

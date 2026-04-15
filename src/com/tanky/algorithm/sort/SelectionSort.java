@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 选择排序实现
  *
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/03/21
  */
 public class SelectionSort {

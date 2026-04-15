@@ -5,7 +5,7 @@ package com.tanky.algorithm.bitopt;
  * 原始：111000010
  * 结果：000000010
  *
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/05/24
  */
 public class ExtractOne {

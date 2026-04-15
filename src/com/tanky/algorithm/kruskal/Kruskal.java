@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 创建人： ZhangZhongguo
+ * 创建人： tanky
  * 创建时间： 2020/5/21
  * 作用：克鲁斯卡尔算法用来解决最最小生成树的问题
  * 修改信息：

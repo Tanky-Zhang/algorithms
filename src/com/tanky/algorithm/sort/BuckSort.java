@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 桶排序实现
  *
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/03/21
  */
 public class BuckSort {

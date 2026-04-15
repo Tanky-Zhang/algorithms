@@ -1,7 +1,7 @@
 package com.tanky.algorithm.prim;
 
 /**
- * 创建人： ZhangZhongguo
+ * 创建人： tanky
  * 创建时间： 2020/5/19
  * 作用：普利姆算法，利用普利姆算法求取最短路径的算法,思路就是每次找出最小的那个路径然后继续遍历下去。
  * 修改信息：

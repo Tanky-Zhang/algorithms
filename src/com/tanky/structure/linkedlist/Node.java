@@ -2,7 +2,7 @@ package com.tanky.structure.linkedlist;
 
 
 /**
- * @author zhangzhongguo
+ * @author tanky
  * @date 2020/01/07
  */
 public class Node {

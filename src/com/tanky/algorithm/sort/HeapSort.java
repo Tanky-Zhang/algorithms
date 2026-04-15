@@ -7,7 +7,7 @@ import java.util.Arrays;
  * [4,3,5,6,8,1,2,0,8,4]
  * n节点的左、右孩子节点分别是2n+1和2n+2
  *
- * @author zhangzhongguo
+ * @author tanky
  * @date 2022/03/14
  */
 public class HeapSort {
