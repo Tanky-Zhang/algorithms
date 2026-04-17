@@ -20,30 +20,25 @@ class Solution {
 
     int ans = 0;
 
-    public int pathSum(TreeNode root, int targetSum) {
+    public int diameterOfBinaryTree(TreeNode root) {
 
-        dfs(root,targetSum,0);
+        dfs(root);
         return ans;
 
     }
 
-    public void dfs(TreeNode node, int targetSum, int currentSum) {
-
-
-        //base case
-        if (currentSum == targetSum) {
-            ans++;
-            return;
-        }
+    public int dfs(TreeNode node) {
 
         if (node == null) {
-            return;
+            return 0;
         }
-        currentSum += node.val;
-        dfs(node.left, targetSum, currentSum);
-        dfs(node.right, targetSum, currentSum);
-        currentSum -= node.val;
-    }
 
+        int left = dfs(node.left);
+        int right = dfs(node.right);
+
+        ans = Math.max(ans, left + right);
+
+        return Math.max(left, right) + 1;
+    }
 }
 //leetcode submit region end(Prohibit modification and deletion)
