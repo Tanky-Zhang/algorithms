@@ -9,13 +9,17 @@ class Solution {
         while (right < nums.length) {
             //如果待处理的不为0就交换
             if (nums[right] != 0) {
-                int tmp = nums[left];
-                nums[left] = nums[right];
-                nums[right] = tmp;
+                swap(nums, left, right);
                 left++;
             }
             right++;
         }
+    }
+
+    private void swap(int[] nums, int left, int right) {
+        int tmp = nums[left];
+        nums[left] = nums[right];
+        nums[right] = tmp;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
