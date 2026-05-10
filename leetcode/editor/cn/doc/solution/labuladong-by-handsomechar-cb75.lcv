@@ -1,0 +1,73 @@
+### 解题思路
+
+部分参考https://labuladong.gitbook.io/algo/mu-lu-ye-1/mu-lu-ye-2/lru-suan-fa
+
+### 代码
+
+* cpp
+
+```cpp
+// STL写法实现哈希链表：双向链表+哈希表。双向链表使用list，哈希表使用map
+// 这里解释一下为什么我尾插不用push_back而用insert？
+// 因为map里存的是key和迭代器，所以两次进行尾插后都要获取最后一个元素的迭代器。
+// back只能获得内容，而list使用的时双向迭代器而不是随机访问迭代器，不能使用end()-1的操作。
+// 综上，只能用insert进行尾插，利用它的返回值更新哈希表的值。还好是list，用insert尾插和push_back一样。
+class LRUCache {
+private:
+    list<pair<int,int>> dlist; // 双向链表list里的每个节点存键值对
+    map<int,decltype(dlist.begin())> lmap; // 哈希表map的值是指向双向链表的迭代器
+    int capacity; // cache容量
+
+    void makeRecently(int key){ // 升为最近使用
+        auto tem_it = dlist.insert(dlist.end(),*lmap[key]); // 尾部是最新的，插入尾部表示升为最近使用
+        dlist.erase(lmap[key]); // 删掉原来的节点
+        lmap[key] = tem_it;
+    }
+
+    void updateValue(int key, int value){ // 更新dlist的key对应的值
+        lmap[key]->second = value;
+        makeRecently(key);
+    }
+
+    void deleteOldest(){ // 删掉最老未用的
+        lmap.erase(dlist.begin()->first); // 删掉哈希表中与双向链表的首元素对应的键值对
+        dlist.pop_front(); // 删掉双向链表的首元素
+    }
+
+    void addPoint(int key, int value){
+        auto tem_it = dlist.insert(dlist.end(),{key,value}); // 将新的键值对加到双向链表尾部
+        lmap.insert({key,tem_it}); // 将新的键值对加到哈希表。
+    }
+
+public:
+    LRUCache(int capacity):capacity(capacity) {}
+
+    int get(int key) {
+        if(lmap.find(key)==lmap.end()){ // 没找到
+            return -1; // c++里返回值是int时，你不能打NULL，用-1
+        }else{ // 找到了
+            makeRecently(key);
+            return lmap[key]->second;
+        }
+    }
+    
+    void put(int key, int value) {
+        if(lmap.find(key)==lmap.end()){ // 没找到
+            if(dlist.size() == capacity){ // 满了
+                deleteOldest(); // 删掉最老节点
+            }
+            addPoint(key, value); // 添加新节点
+        }else{ // 找到了
+            updateValue(key, value); // 更新节点值
+        }
+    }
+};
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache* obj = new LRUCache(capacity);
+ * int param_1 = obj->get(key);
+ * obj->put(key,value);
+ */
+```
+
