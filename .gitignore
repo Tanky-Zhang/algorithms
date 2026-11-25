@@ -3,4 +3,6 @@ out/
 # IntelliJ project files
 *.idea
 *.iml
+target/
+.mvn/repository/
 
