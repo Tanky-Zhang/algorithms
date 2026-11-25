@@ -12,7 +12,7 @@ mvn test
 mvn -Dtest=TwoSumTest test
 ```
 
-已完成 TwoSum、GroupAnagrams、LongestConsecutive、MoveZeroes、ContainerWithMostWater 的首练与测试。后续新题仅在开始时创建模板，未实现模板应真实报告失败，不跳过或伪装通过。全量验证运行 `mvn test`。
+已完成 TwoSum、GroupAnagrams、LongestConsecutive、MoveZeroes、ContainerWithMostWater、ThreeSum、TrappingRainWater 的首练与测试。接雨水另有教练提供的 trapTwoPointers 示范。后续新题仅在开始时创建模板，未实现模板应真实报告失败，不跳过或伪装通过。全量验证运行 `mvn test`。
 
 ## 目录
 
@@ -31,4 +31,4 @@ Maven 仅使用标准目录 src/main/java 与 src/test/java。现有 src/com、l
 
 月度目标与每日新题见 [PLAN.md](PLAN.md)；每次结束时在 [notes/sessions.md](notes/sessions.md) 留下交接，下一次先读交接与到期复习。
 
-当前：2026-11-25 已完成 49、128、283、11，今日 4 道新题目标达成；下一题为双指针 / 15. 三数之和，明天先做今日四题的 D+1 复习。不提前提供后续答案。
+当前：2026-11-25 训练已结束，完成 49、128、283、11、15、42，累计首练 7/100。下一次先处理到期复习，11 月 26 日为今日六题的 D+1；新题从滑动窗口 / 3. 无重复字符的最长子串开始。不提前提供后续答案。

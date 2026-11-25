@@ -11,7 +11,9 @@
 - [128. 最长连续序列](01-hash/0128-longest-consecutive.md)
 - [283. 移动零](02-twopointers/0283-move-zeroes.md)
 - [11. 盛最多水的容器](02-twopointers/0011-container-with-most-water.md)
+- [15. 三数之和](02-twopointers/0015-three-sum.md)
+- [42. 接雨水](02-twopointers/0042-trapping-rain-water.md)
 
 复习日志：[reviews.md](reviews.md)；训练交接：[sessions.md](sessions.md)；月度安排：[../PLAN.md](../PLAN.md)。
 
-下一题：双指针 / 15. 三数之和，开始时创建模板和测试；2026-11-26 先复习 49、128、283、11。
+下一题：滑动窗口 / 3. 无重复字符的最长子串，开始时创建模板和测试；2026-11-26 先复习 49、128、283、11、15、42。三数之和优化版及接雨水双指针版包含明确授权后的教练示范，复习时需要自行复现。
