@@ -13,7 +13,9 @@
 - [11. 盛最多水的容器](02-twopointers/0011-container-with-most-water.md)
 - [15. 三数之和](02-twopointers/0015-three-sum.md)
 - [42. 接雨水](02-twopointers/0042-trapping-rain-water.md)
+- [3. 无重复字符的最长子串](03-slidingwindow/0003-longest-substring-without-repeating-characters.md)（提示后完成）
+- [438. 找到字符串中所有字母异位词](03-slidingwindow/0438-find-all-anagrams-in-a-string.md)（教练纠正后完成）
 
 复习日志：[reviews.md](reviews.md)；训练交接：[sessions.md](sessions.md)；月度安排：[../PLAN.md](../PLAN.md)。
 
-下一题：滑动窗口 / 3. 无重复字符的最长子串，开始时创建模板和测试；2026-11-26 先复习 49、128、283、11、15、42。三数之和优化版及接雨水双指针版包含明确授权后的教练示范，复习时需要自行复现。
+待继续：[560. 和为 K 的子数组](04-substring/0560-subarray-sum-equals-k.md)，仅有模板，不计完成；其后为239。11月27日先复习1、3、438。教练示范或纠正过的版本不代表独立掌握，复习时需要自行复现。

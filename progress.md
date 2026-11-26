@@ -1,5 +1,7 @@
 # Hot 100 训练进度
 
+最新状态（2026-11-26 收尾）：六道 D+1 口述检查已记录，3 提示后完成、438 经教练纠正后完成，累计覆盖9/100（非全部独立完成）。560仅创建模板与测试，未实现、不计完成，下一次继续560。11月27日到期复习1、3、438。
+
 来源：[力扣官方新版 Hot 100](https://leetcode.cn/studyplan/top-100-liked/)，核对日期：2026-11-24（Asia/Shanghai）。17 个专题、100 道不重复题目；专题及题目顺序与官方一致。结构化快照见 [curriculum/hot100.json](curriculum/hot100.json)。
 
 L0：没有思路；L1：阅读题解后能够理解；L2：能够独立实现；L3：能够快速实现、解释并解决变形题。
@@ -16,24 +18,24 @@ L0：没有思路；L1：阅读题解后能够理解；L2：能够独立实现�
 | 题号 | 题目 | 难度 | 掌握程度 | 练习次数 | 最近练习时间 | 下次复习时间 |
 | --- | --- | --- |------| --- | --- | --- |
 | 1 | [两数之和](https://leetcode.cn/problems/two-sum/) | 简单 | L2   | 1 | 2026-11-25（口述） | 2026-11-27 |
-| 49 | [字母异位词分组](https://leetcode.cn/problems/group-anagrams/) | 中等 | L0（待确认，建议 L2） | 1 | 2026-11-25 10:21 +08:00 | 2026-11-26 |
-| 128 | [最长连续序列](https://leetcode.cn/problems/longest-consecutive-sequence/) | 中等 | L0（待复习评估） | 1 | 2026-11-25 10:38 +08:00 | 2026-11-26 |
+| 49 | [字母异位词分组](https://leetcode.cn/problems/group-anagrams/) | 中等 | L0（待确认，建议 L2） | 1 | 2026-11-26（口述） | 2026-11-28 |
+| 128 | [最长连续序列](https://leetcode.cn/problems/longest-consecutive-sequence/) | 中等 | L0（待复习评估） | 1 | 2026-11-26（口述） | 2026-11-28 |
 
 ## 02. 双指针
 
 | 题号 | 题目 | 难度 | 掌握程度 | 练习次数 | 最近练习时间 | 下次复习时间 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 283 | [移动零](https://leetcode.cn/problems/move-zeroes/) | 简单 | L0（待复习评估） | 1 | 2026-11-25 13:31 +08:00 | 2026-11-26 |
-| 11 | [盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/) | 中等 | L0（待复习评估） | 1 | 2026-11-25 14:14 +08:00 | 2026-11-26 |
-| 15 | [三数之和](https://leetcode.cn/problems/3sum/) | 中等 | L0（待复习评估） | 1 | 2026-11-25 19:56 +08:00 | 2026-11-26 |
-| 42 | [接雨水](https://leetcode.cn/problems/trapping-rain-water/) | 困难 | L0（待复习评估） | 1 | 2026-11-25 22:00 +08:00 | 2026-11-26 |
+| 283 | [移动零](https://leetcode.cn/problems/move-zeroes/) | 简单 | L0（待复习评估） | 1 | 2026-11-26（口述） | 2026-11-28 |
+| 11 | [盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/) | 中等 | L0（待复习评估） | 1 | 2026-11-26（口述） | 2026-11-28 |
+| 15 | [三数之和](https://leetcode.cn/problems/3sum/) | 中等 | L0（待复习评估） | 1 | 2026-11-26（口述） | 2026-11-28 |
+| 42 | [接雨水](https://leetcode.cn/problems/trapping-rain-water/) | 困难 | L0（待复习评估） | 1 | 2026-11-26（口述） | 2026-11-28 |
 
 ## 03. 滑动窗口
 
 | 题号 | 题目 | 难度 | 掌握程度 | 练习次数 | 最近练习时间 | 下次复习时间 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 3 | [无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/) | 中等 | L0 | 0 | — | — |
-| 438 | [找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/) | 中等 | L0 | 0 | — | — |
+| 3 | [无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/) | 中等 | L0（待复习评估） | 1 | 2026-11-26 13:19 +08:00 | 2026-11-27 |
+| 438 | [找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/) | 中等 | L0（教练纠正，待独立复现） | 1 | 2026-11-26 20:06 +08:00 | 2026-11-27 |
 
 ## 04. 子串
 
