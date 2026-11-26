@@ -15,7 +15,8 @@
 - [42. 接雨水](02-twopointers/0042-trapping-rain-water.md)
 - [3. 无重复字符的最长子串](03-slidingwindow/0003-longest-substring-without-repeating-characters.md)（提示后完成）
 - [438. 找到字符串中所有字母异位词](03-slidingwindow/0438-find-all-anagrams-in-a-string.md)（教练纠正后完成）
+- [560. 和为 K 的子数组](04-substring/0560-subarray-sum-equals-k.md)（提示后完成）
 
 复习日志：[reviews.md](reviews.md)；训练交接：[sessions.md](sessions.md)；月度安排：[../PLAN.md](../PLAN.md)。
 
-待继续：[560. 和为 K 的子数组](04-substring/0560-subarray-sum-equals-k.md)，仅有模板，不计完成；其后为239。11月27日先复习1、3、438。教练示范或纠正过的版本不代表独立掌握，复习时需要自行复现。
+待继续：239. 滑动窗口最大值，尚未创建模板。11月27日先复习1、3、438、560。教练示范或纠正过的版本不代表独立掌握，复习时需要自行复现。
