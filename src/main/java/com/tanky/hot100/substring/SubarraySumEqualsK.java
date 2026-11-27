@@ -24,6 +24,6 @@ public class SubarraySumEqualsK {
 
         }
         return ans;
-        
+
     }
 }

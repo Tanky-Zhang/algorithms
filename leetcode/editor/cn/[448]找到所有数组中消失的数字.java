@@ -3,25 +3,22 @@
 class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
 
-        int len = nums.length;
+        int n = nums.length;
 
-        List<Integer> res = new ArrayList<>();
-
-        for (int i = 0; i < len; i++) {
-            //一定是index-1的位置
-            int index = (nums[i] - 1) % len;
-            if (nums[index] <= len) {
-                nums[index] += len;
+        for (int i = 0; i < n; i++) {
+            int index = (nums[i] - 1) % n;
+            if (nums[index] <= n) {
+                nums[index] = nums[index] + n;
             }
         }
 
-        for (int i = 0; i < len; i++) {
-            if (nums[i] <= len) {
-                res.add(i + 1);
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            if (nums[i] <= n) {
+                list.add(i + 1);
             }
         }
-
-        return res;
+        return list;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
