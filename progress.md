@@ -1,5 +1,7 @@
 # Hot 100 训练进度
 
+当前交接（2026-11-27）：到期口述复习已记录，3的提示后编码复现12/12通过，总次数2；239正在编码、当前编译失败，未完成，累计仍10/100。跨设备继续先读[HANDOFF.md](HANDOFF.md)。
+
 最新状态（2026-11-26 21:00）：六道 D+1 口述检查已记录，今日完成3、438、560，累计覆盖10/100（非全部独立完成）。560在前缀和计数提示后自行编码通过，下一题239。11月27日到期复习1、3、438、560。
 
 来源：[力扣官方新版 Hot 100](https://leetcode.cn/studyplan/top-100-liked/)，核对日期：2026-11-24（Asia/Shanghai）。17 个专题、100 道不重复题目；专题及题目顺序与官方一致。结构化快照见 [curriculum/hot100.json](curriculum/hot100.json)。
@@ -17,7 +19,7 @@ L0：没有思路；L1：阅读题解后能够理解；L2：能够独立实现�
 
 | 题号 | 题目 | 难度 | 掌握程度 | 练习次数 | 最近练习时间 | 下次复习时间 |
 | --- | --- | --- |------| --- | --- | --- |
-| 1 | [两数之和](https://leetcode.cn/problems/two-sum/) | 简单 | L2   | 1 | 2026-11-25（口述） | 2026-11-27 |
+| 1 | [两数之和](https://leetcode.cn/problems/two-sum/) | 简单 | L2   | 1 | 2026-11-27（口述） | 2026-12-01 |
 | 49 | [字母异位词分组](https://leetcode.cn/problems/group-anagrams/) | 中等 | L0（待确认，建议 L2） | 1 | 2026-11-26（口述） | 2026-11-28 |
 | 128 | [最长连续序列](https://leetcode.cn/problems/longest-consecutive-sequence/) | 中等 | L0（待复习评估） | 1 | 2026-11-26（口述） | 2026-11-28 |
 
@@ -34,14 +36,14 @@ L0：没有思路；L1：阅读题解后能够理解；L2：能够独立实现�
 
 | 题号 | 题目 | 难度 | 掌握程度 | 练习次数 | 最近练习时间 | 下次复习时间 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 3 | [无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/) | 中等 | L0（待复习评估） | 1 | 2026-11-26 13:19 +08:00 | 2026-11-27 |
-| 438 | [找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/) | 中等 | L0（教练纠正，待独立复现） | 1 | 2026-11-26 20:06 +08:00 | 2026-11-27 |
+| 3 | [无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/) | 中等 | L0（提示后复现，待独立评估） | 2 | 2026-11-27 14:34 +08:00 | 2026-11-29 |
+| 438 | [找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/) | 中等 | L0（教练纠正，待独立复现） | 1 | 2026-11-27（口述） | 2026-11-29 |
 
 ## 04. 子串
 
 | 题号 | 题目 | 难度 | 掌握程度 | 练习次数 | 最近练习时间 | 下次复习时间 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 560 | [和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/) | 中等 | L0（待独立复现评估） | 1 | 2026-11-26 21:00 +08:00 | 2026-11-27 |
+| 560 | [和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/) | 中等 | L0（待独立复现评估） | 1 | 2026-11-27（口述） | 2026-11-29 |
 | 239 | [滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/) | 困难 | L0 | 0 | — | — |
 | 76 | [最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/) | 困难 | L0 | 0 | — | — |
 
